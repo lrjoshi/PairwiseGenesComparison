@@ -1,4 +1,4 @@
-Package: pairwise_genes_comparison
+Package: PairwiseGenesComparison
 Type: Package
 Title: Compare individual genes (CDS) of two genomes
 Version: 0.1.0

@@ -1,5 +1,6 @@
 #required packages
 library (tidyverse)
+library (readr)
 library (seqinr)
 library (DECIPHER)
 library (formattable)
