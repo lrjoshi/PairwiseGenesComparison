@@ -7,8 +7,8 @@ library (formattable)
 
 
 #Provide path to the filename
-filename1 <- paste("D:/Courses/NGS Tutorials/R_Practice/gff3/gene_sequence_format.txt")
-filename2 <- paste("D:/Courses/NGS Tutorials/R_Practice/gff3/gene_sequence_format.txt")
+#filename1 <- paste("D:/Courses/NGS Tutorials/R_Practice/gff3/gene_sequence_format.txt")
+#filename2 <- paste("D:/Courses/NGS Tutorials/R_Practice/gff3/gene_sequence_format.txt")
 
 
 
