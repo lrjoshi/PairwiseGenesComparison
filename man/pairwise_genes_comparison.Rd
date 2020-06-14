@@ -1,5 +1,5 @@
-\name{pairwise_genes_comparsion}
-\alias{pairwise_genes_comparsion}
+\name{PairwiseGenesComparsion}
+\alias{PairwiseGenesComparsion}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
@@ -17,7 +17,7 @@ pairwise_genes_comparsion(filepath1, filepath2)
   filepath2= path to the second genome file
 }
 \details{
-Dependency : DECIPHER, TIDYVERSE, FORMATTABLE
+Dependency : DECIPHER, tidyverse,formattable, seqinr
 }
 \value{
 %%  ~Describe the value returned
@@ -33,7 +33,7 @@ Dependency : DECIPHER, TIDYVERSE, FORMATTABLE
 Lok Raj Joshi
 }
 \note{
-
+Make sure you have all the depedencies installed.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
