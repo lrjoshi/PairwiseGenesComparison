@@ -2,7 +2,8 @@
 \alias{PairwiseGenesComparsion}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Compare individual CDS from two genomes.
+
 }
 \description{
 This package can be used to compare indiviual genes of the two genomes. This package makes use of coding sequences format that can be found in Genbank. Right now, the package allows pairwise comparison of the genes of two genomes. You find detail manual in the github wiki section. You will need FASTA Nuceotide sequence files of the two genomes. These can be obtained from the Genbank. If you click on Send to button on Genbank, then you can select "Coding Sequences" and then FASTA Nucleotide or FASTA Protein sequences. Then you can run pairwise_genes_comparison() funtion in R. You have to provide path for two files and then you can run pairwise_genes_comaprison function on those two files. It will create a nice summary table output. It will also save the table as a csv file called "summary_table,csv" in the current folder. It uses DECIPHER package for pairwise alignment and to generate similarity matrix.
