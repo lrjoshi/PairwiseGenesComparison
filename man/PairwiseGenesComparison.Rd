@@ -1,9 +1,5 @@
-\name{
-PairwiseGenesComparsion
-}
-\alias{
-PairwiseGenesComparsion
-}
+\name{PairwiseGenesComparsion}
+\alias{PairwiseGenesComparsion}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
