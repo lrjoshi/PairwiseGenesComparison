@@ -311,6 +311,5 @@ print ("The suffix 1 and 2 denotes the file1 and file2 respectively.")
 print ("Thank you. End of analysis.")
 
 }
-head(similarity_table)
 
-pairwise_genes_comparison(filename1,filename2)
+#pairwise_genes_comparison(filename1,filename2)
