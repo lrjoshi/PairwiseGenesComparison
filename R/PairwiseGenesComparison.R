@@ -221,7 +221,7 @@ for (i in 1:nrow(table1)){
 
 
 
-for (j in 1:11){
+for (j in 1:nrow(table1)){
   infilename = paste0("genes",j,".csv")
   file <- read.csv (file=infilename, header=TRUE)
 
