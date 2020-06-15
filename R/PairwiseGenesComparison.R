@@ -12,7 +12,7 @@ library (formattable)
 
 
 
-pairwise_genes_comparison <- function (filename1,filename2) {
+#pairwise_genes_comparison <- function (filename1,filename2) {
 
 
 file1 <- readLines(filename1)
@@ -149,7 +149,8 @@ names2 <- table2$name
 string_list1 <-  str_extract_all(names1, boundary("word"))
 string_list2 <-  str_extract_all(names2, boundary("word"))
 
-
+string_list1
+string_list2
 
 name_vector1 = c()
 name_vector2 = c()
@@ -161,14 +162,15 @@ gene_length1=c()
 gene_length2=c()
 for (z in 1:nrow(table1)) {
   gene_name1 <- string_list1[[c(z,4)]]
-  start_pos1 <- as.numeric(string_list1[[c(z,11)]])
-  stop_pos1 <-as.numeric( string_list1[[c(z,12)]])
+  start_pos1 <- as.numeric(string_list1[[c(z,16)]])
+  stop_pos1 <-as.numeric( string_list1[[c(z,17)]])
 
 
   gene_name2 <- string_list2[[c(z,4)]]
   start_pos2 <- as.numeric(string_list2[[c(z,11)]])
   stop_pos2 <- as.numeric(string_list2[[c(z,12)]])
-
+  print (start_pos1)
+  print (start_pos2)
 
   gene_length2 =append(gene_length2,(stop_pos2-start_pos2+1))
   gene_length1 =append(gene_length1,(stop_pos1-start_pos1+1))
@@ -226,6 +228,8 @@ for (j in 1:nrow(table1)){
   file <- read.csv (file=infilename, header=TRUE)
 
   file = as.data.frame(file)
+  file$name=c(name_vector1[j],name_vector2[j])
+
   #delete if any existing file
 
   # unlink(c("dna_fasta.fasta"), force=TRUE)
@@ -239,6 +243,7 @@ for (j in 1:nrow(table1)){
     sequence = paste(file[k,2])
     cat(name,sep="\n")
     cat(sequence,sep="\n")
+    print (name)
   }
 
   #this is sink all the console output to the file
@@ -269,6 +274,9 @@ for (l in 1:nrow(table1)){
 }
 
 
+#format similarity to two decimal places
+percent_similarity=(1-similarity)*100
+percent_similarity= format(round(percent_similarity, 2), nsmall = 2)
 
 #create the table of the genes and the similarity score between two genes
 
@@ -279,7 +287,7 @@ similarity_table <- data.frame (Gene_Name=name_vector1,
                                 Start_Sequence2=start_position2,
                                 Stop_Sequence2=stop_position2,
                                 Gene_Length2= gene_length2,
-                                Percentage_Similarity=((1-similarity)*100))
+                                Percentage_Similarity=percent_similarity)
 
 
 
@@ -291,17 +299,17 @@ write.csv(similarity_table,"summary_table.csv")
 df_format <- read_csv ("summary_table.csv")
 
 nice_table <- formattable (df_format,align=c("c","c","c","c","c","c","c","c","l"),
-             list(
-               Gene_Name= formatter("span",style = ~ style(color = "black",font.weight = "bold")),
-               Start_Sequence1=color_tile ("#E4F9E3","#E4F9E3"),
-               Stop_Sequence1=color_tile ("#E4F9E3","#E4F9E3"),
-               Gene_Length1=color_tile ("#E4F9E3","#E4F9E3"),
-               Start_Sequence2=color_tile ("#D1E6FA","#D1E6FA"),
-               Stop_Sequence2=color_tile ("#D1E6FA","#D1E6FA"),
-               Gene_Length2=color_tile ("#D1E6FA","#D1E6FA"),
+                           list(
+                             Gene_Name= formatter("span",style = ~ style(color = "black",font.weight = "bold")),
+                             Start_Sequence1=color_tile ("#E4F9E3","#E4F9E3"),
+                             Stop_Sequence1=color_tile ("#E4F9E3","#E4F9E3"),
+                             Gene_Length1=color_tile ("#E4F9E3","#E4F9E3"),
+                             Start_Sequence2=color_tile ("#D1E6FA","#D1E6FA"),
+                             Stop_Sequence2=color_tile ("#D1E6FA","#D1E6FA"),
+                             Gene_Length2=color_tile ("#D1E6FA","#D1E6FA"),
 
-               Percentage_Similarity =color_bar ("#FA614B")
-             ))
+                             Percentage_Similarity =color_bar ("#FA614B")
+                           ))
 
 print (nice_table)
 ########Final Message#################
@@ -310,6 +318,6 @@ print ("Check summary_table.csv file in the current directory.")
 print ("The suffix 1 and 2 denotes the file1 and file2 respectively.")
 print ("Thank you. End of analysis.")
 
-}
+#}
 
 #pairwise_genes_comparison(filename1,filename2)
