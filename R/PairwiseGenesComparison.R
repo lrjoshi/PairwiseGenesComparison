@@ -280,10 +280,11 @@ percent_similarity= format(round(percent_similarity, 2), nsmall = 2)
 
 #create the table of the genes and the similarity score between two genes
 
-similarity_table <- data.frame (Gene_Name=name_vector1,
+similarity_table <- data.frame (Gene_Name1=name_vector1,
                                 Start_Sequence1=start_position1,
                                 Stop_Sequence1=stop_position1,
                                 Gene_Length1= gene_length1,
+                                Gene_Name2=name_vector2,
                                 Start_Sequence2=start_position2,
                                 Stop_Sequence2=stop_position2,
                                 Gene_Length2= gene_length2,
@@ -300,7 +301,8 @@ df_format <- read_csv ("summary_table.csv")
 
 nice_table <- formattable (df_format,align=c("c","c","c","c","c","c","c","c","l"),
                            list(
-                             Gene_Name= formatter("span",style = ~ style(color = "black",font.weight = "bold")),
+                             Gene_Name1= formatter("span",style = ~ style(color = "black",font.weight = "bold")),
+                             Gene_Name2= formatter("span",style = ~ style(color = "black",font.weight = "bold")),
                              Start_Sequence1=color_tile ("#E4F9E3","#E4F9E3"),
                              Stop_Sequence1=color_tile ("#E4F9E3","#E4F9E3"),
                              Gene_Length1=color_tile ("#E4F9E3","#E4F9E3"),
