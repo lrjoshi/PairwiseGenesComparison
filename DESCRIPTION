@@ -1,7 +1,7 @@
 Package: PairwiseGenesComparison
 Type: Package
 Title: Compare individual genes (CDS) of two genomes
-Version: 0.1.0
+Version: 0.2.0
 Author: Lok Raj Joshi
 Maintainer: Lok Raj Joshi <lrj36@cornell.edu>
 Description: Sometimes it is important to look at pairwise comparison of each genes 
