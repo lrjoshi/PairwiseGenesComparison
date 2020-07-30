@@ -297,6 +297,6 @@ pairwise_genes_comparison <- function (filename1,filename2) {
 }
 
 
-filename1 <- paste ("SARS-Cov-2-Italy.txt")
-filename2<- paste("SARS-CoV-2-Wuhan.txt")
-pairwise_genes_comparison(filename1,filename2)
+#filename1 <- paste ("SARS-Cov-2-Italy.txt")
+#filename2<- paste("SARS-CoV-2-Wuhan.txt")
+#pairwise_genes_comparison(filename1,filename2)
