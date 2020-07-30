@@ -2,6 +2,12 @@
 Compare individual CDS from two genomes. 
 
 
+### Installation 
+
+```
+install_github("lrjoshi/PairwiseGenesComparison")
+```
+
 ### Provide path to the filename
 
 ```
