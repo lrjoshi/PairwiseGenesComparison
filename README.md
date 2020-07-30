@@ -41,6 +41,12 @@ file2 <- paste(""data/SARS-CoV-2-Wuhan.txt"")
 ```
 pairwise_genes_comparison(file1,file2)
 ```
+### Sample Output
+
+This is the comparison of the two genomes of SARS-CoV-2. One from Wuhan china and another one from Italy.
+
+![Sample Table](Rplot.png)
+
 
 ### Notes
 
