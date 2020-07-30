@@ -8,13 +8,35 @@ Compare individual CDS from two genomes.
 install_github("lrjoshi/PairwiseGenesComparison")
 ```
 
-### Provide path to the filename
+### Load dependencies
+```
+library (tidyverse)
+
+library (readr)
+
+library (seqinr)
+
+library (DECIPHER)
+
+library (formattable)
+
+library (PairwiseGenesComparison)
+``
+
+
+### Provide filenames (if in current folder) or path to the filename
+```
+file1 <- "SARS-Cov-2-Italy.txt"
+
+file2 <- "SARS-CoV-2-Wuhan.txt"
+```
+
+or
 
 ```
 filename1 <- paste("data/SARS-Cov-2-Italy.txt")
 
 filename2 <- paste(""data/SARS-CoV-2-Wuhan.txt"")
-
 ```
 ### Run function 
 ```
