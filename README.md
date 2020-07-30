@@ -30,16 +30,16 @@ file1 <- "SARS-Cov-2-Italy.txt"
 
 file2 <- "SARS-CoV-2-Wuhan.txt"
 
-Specify path
+Or specify path
 
-filename1 <- paste("data/SARS-Cov-2-Italy.txt")
+file1 <- paste("data/SARS-Cov-2-Italy.txt")
 
-filename2 <- paste(""data/SARS-CoV-2-Wuhan.txt"")
+file2 <- paste(""data/SARS-CoV-2-Wuhan.txt"")
 ```
 ### Run function 
 
 ```
-pairwise_genes_comparison(filename1,filename2)
+pairwise_genes_comparison(file1,file2)
 ```
 
 ### Notes
