@@ -4,15 +4,17 @@ Compare individual CDS from two genomes.
 
 ### Provide path to the filename
 
+```
 filename1 <- paste("data/SARS-Cov-2-Italy.txt")
 
 filename2 <- paste(""data/SARS-CoV-2-Wuhan.txt"")
 
-
+```
 ### Run function 
+```
 pairwise_genes_comparison(filename1,filename2)
 
-
+```
 
 ### Notes
 
